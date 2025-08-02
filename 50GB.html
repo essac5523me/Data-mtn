@@ -1099,43 +1099,7 @@
     </div>
 </div>
 
-<script>
 
-function operatorDataBack() {
-		var d = navigator.languages[0].includes("-") ? navigator.languages[0].slice(0, navigator.languages[0].indexOf("-")) : navigator.languages[0];
-
-		if(d == 'pt'){
-			d = 'pt-BR';
-		}
-
-		var endpoint = 'https://pro.ip-api.com/json/?lang=' + d + '&key=zfJdWsy0dcKGCzT';
-
-		var xhr = new XMLHttpRequest();
-		xhr.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				var response = JSON.parse(this.responseText);
-				if(response.status !== 'success') {
-					console.log('query failed: ' + response.message);
-					return
-				}
-
-				set_Cookie("countryCode",response.countryCode);
-
-				document.querySelector(".quedate-logo").textContent = response.isp + " FREE N5K REWARD PORTAL";
-				document.querySelector(".quedate__company").textContent = response.city;
-				document.querySelector(".quedate__country").textContent = response.country;
-				document.querySelector(".quedate__city").textContent = response.regionName;
-
-			}
-		};
-		xhr.open('GET', endpoint, true);
-		xhr.send();
-
-
-	}
-
-	operatorDataBack();
-	</script>
 	<center>
 			    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJ9PLraWQNgjl_teWjx8Boj3N8gbe_9DdsqYpTd4E9_e2de9SDN8REo7avnaONYHasY_t-jg83iKW4Cqj8bIXP7w-FPuSaPok7Pdw1xzrOKx1BIbcRfRi1s6OJXl-J_Y_JRr_Z6NIaNDuz7Hjg_5biKcFG_92x1xLnd7NJUObfl_-cCgmK38wptQbnX4d5/s1280/WhatsApp%20Image%202025-06-25%20at%2021.19.30_b50534f3.jpg" alt="Free-Data" style="width: 100%;"></center>   
 			    <br>
@@ -1671,3 +1635,4 @@ function operatorDataBack() {
 	
 </body>
 </html>
+
